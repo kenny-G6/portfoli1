@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gbenga - Software Developer</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <style>
+    body {
+      background-color: #f8f9fa; 
+      font-family: Arial, sans-serif; 
+    }
+
+    .hero-section {
+      background-color: #0d6efd; 
+      color: white;              
+      padding: 80px 0;           
+    }
+
+
+    .section-title {
+      font-size: 2rem;          
+      font-weight: bold;        
+      margin-bottom: 10px;      
+    }
+
+    
+    .section-title::after {
+      content: "";               
+      display: block;            
+      width: 60px;               
+      height: 4px;               
+      background-color: #0d6efd; 
+      margin-top: 8px;           
+    }
+
+    
+    .skill-label {
+      display: flex;             
+      justify-content: space-between; 
+      margin-bottom: 5px;        
+      font-weight: bold;         
+    }
+
+    
+    .card:hover {
+      transform: translateY(-5px);       
+      transition: transform 0.2s ease;   
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);     }
+
+    
+    footer {
+      background-color: #212529;
+      color: #adb5bd;           
+      padding: 30px 0;          
+      text-align: center;       
+    }
+
+    
+    footer a {
+      color: #adb5bd;
+      text-decoration: none;
+      margin: 0 10px;            
+      font-size: 1.4rem;         
+    }
+
+    
+    footer a:hover {
+      color: #0d6efd;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+  <div class="container">
+   
+    <a class="navbar-brand fw-bold" href="#home">
+      <span class="text-primary fw-bold fs-5">GB</span>
+      
+    </a>
+
+    <button 
+      class="navbar-toggler" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navLinks">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navLinks">
+
+      <ul class="navbar-nav ms-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#experience">Experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+
+        <li class="nav-item ms-2">
+          <a 
+            class="btn btn-primary btn-sm" 
+            data-bs-toggle="modal" 
+            data-bs-target="#hireModal">
+            Hire Me
+          </a>
+        </li>
+
+      </ul>
+    </div><!-- end navbar collapse -->
+
+  </div><!-- end container -->
+</nav>
+<!-- END NAVBAR -->
+
+<!-- Offcanvas Panel -->
+<div 
+  class="offcanvas offcanvas-start" 
+  tabindex="-1" 
+  id="sidebar">
+
+  
+  <div class="offcanvas-header bg-dark text-white">
+    <h5 class="offcanvas-title fw-bold fs-6">GB</h5>
+    <button 
+      type="button" 
+      class="btn-close btn-close-white" 
+      data-bs-dismiss="offcanvas">
+    </button>
+  </div>
+
+  <div class="offcanvas-body">
+    <p class="text-muted">Navigate</p>
+    <ul class="list-unstyled">
+      <!-- list-unstyled removes the default bullet points -->
+      <li class="mb-2"><a href="#about"      class="text-decoration-none">About</a></li>
+      <li class="mb-2"><a href="#skills"     class="text-decoration-none">Skills</a></li>
+      <li class="mb-2"><a href="#portfolio"  class="text-decoration-none">Portfolio</a></li>
+      <li class="mb-2"><a href="#experience" class="text-decoration-none">Experience</a></li>
+      <li class="mb-2"><a href="#contact"    class="text-decoration-none">Contact</a></li>
+    </ul>
+
+    <hr /> <!-- a horizontal dividing line -->
+
+    <!-- CV Download button inside the sidebar -->
+    <a href="Gbenga_CV.pdf" class="btn btn-primary w-100" download>
+      
+      <i class="bi bi-download me-2"></i> Download CV
+    </a>
+  </div>
+
+</div>
+<!-- END OFFCANVAS -->
+
+<section class="hero-section text-center" id="home">
+
+  <div class="container pt-5 mt-3">
+    <span class="badge bg-light text-primary mb-3 fs-6">
+      &#9679; Available for hire
+    </span>
+
+    <!-- Main heading — the developer's name -->
+    <h1 class="display-4 fw-bold">Hi, I'm Gbenga</h1>
+    
+    <!-- Job title -->
+    <h2 class="h4 mb-4">Full-Stack Software Developer</h2>
+
+    <!-- Short description paragraph -->
+    <p class="lead mb-4 mx-auto" style="max-width: 600px;">
+
+      I build clean, reliable software that solves real problems.
+      Whether it's a web app, an API, or a full product, I deliver quality, on time.
+    </p>
+
+    <!-- Call-to-action buttons -->
+    <a href="#portfolio" class="btn btn-light btn-lg me-2">View My Work</a>
+    
+    <a href="#contact" class="btn btn-outline-light btn-lg">Contact Me</a>
+    <!-- btn-outline-light = transparent button with white border -->
+
+    <!-- Stats row below the buttons -->
+    <div class="row justify-content-center mt-5">
+   
+      <!-- Each stat is a column -->
+      <div class="col-4 col-md-2">
+        <h3 class="fw-bold">5+</h3>
+        <p class="small">Years Exp.</p>
+      </div>
+      <div class="col-4 col-md-2">
+        <h3 class="fw-bold">30+</h3>
+        <p class="small">Projects</p>
+      </div>
+      <div class="col-4 col-md-2">
+        <h3 class="fw-bold">15+</h3>
+        <p class="small">Happy Clients</p>
+      </div>
+    </div><!-- end stats row -->
+
+  </div><!-- end container -->
+</section>
+<!-- END HERO -->
+
+<section id="about" class="py-5">
+
+  <div class="container">
+
+    <h2 class="section-title">About Me</h2>
+    <!-- Our custom .section-title CSS adds the blue underline -->
+
+    <div class="row align-items-center mt-4">
+      
+      <!-- Left column: photo placeholder and CV download -->
+      <div class="col-md-4 text-center mb-4 mb-md-0">
+
+        <div 
+          class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center"
+          style="width:150px; height:150px;">
+          <img src="kehinde.jpg"class="img-fluid bg-primary rounded-circle d-inline-flex align-items-center justify-content-center">
+        </div>
+
+        <!-- Name and title under the photo -->
+        <h5 class="mt-3 fw-bold">Gbenga</h5>
+        <p class="text-muted">Software Developer</p>
+        
+        <!-- CV Download button -->
+        <a href="Gbenga_CV.pdf" class="btn btn-primary" download>
+          <i class="bi bi-file-earmark-arrow-down me-1"></i> Download CV
+        </a>
+
+      </div><!-- end left column -->
+
+      <!-- Right column: text about me -->
+      <div class="col-md-8">
+        <!-- col-md-8 = takes 8/12 columns on medium+ screens -->
+
+        <p>
+          I'm Gbenga, a software developer based in Lagos, Nigeria. I specialise in
+          building full-stack web applications from designing clean user interfaces
+          to building powerful backend systems and APIs.
+        </p>
+        <p>
+          I take pride in writing code that is clean, well-organised, and easy for
+          other developers to understand. Every project I work on gets my full attention
+          and commitment from start to finish.
+        </p>
+
+      
+        <ul class="list-group list-group-flush mt-3">
+          <li class="list-group-item bg-transparent px-0">
+            <!-- bg-transparent = no background. px-0 = no horizontal padding -->
+            <strong>Location:</strong> Lagos, Nigeria
+          </li>
+          <li class="list-group-item bg-transparent px-0">
+            <strong>Email:</strong> gbenga@email.com
+          </li>
+          <li class="list-group-item bg-transparent px-0">
+            <strong>Available for:</strong> Employment, Contracts &amp; Freelance
+          </li>
+        </ul>
+
+      </div><!-- end right column -->
+    </div><!-- end row -->
+
+  </div><!-- end container -->
+</section>
+<!-- END ABOUT -->
+
+
+<!----------------------------------------------------------
+     SKILLS SECTION
+---------------------------------------------------------- -->
+<section id="skills" class="py-5 bg-light">
+  
+  <div class="container">
+
+    <h2 class="section-title">My Skills</h2>
+
+    <div class="row mt-4">
+
+      <!-- Left column: programming languages & frameworks -->
+      <div class="col-md-6 mb-4">
+        <h5 class="fw-bold mb-3">Languages &amp; Frameworks</h5>
+
+        <!-- Each skill has a label row and then a Bootstrap progress bar -->
+
+        <div class="skill-label">
+          <span>JavaScript</span>
+          <span>90%</span>
+        </div>
+  
+        <div class="progress mb-3">
+          <div class="progress-bar" role="progressbar" style="width: 90%"></div>
+        </div>
+
+        <div class="skill-label">
+          <span>Python</span>
+          <span>80%</span>
+        </div>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 80%"></div>
+          <!-- bg-success = green colour for variety -->
+        </div>
+
+        <div class="skill-label">
+          <span>React</span>
+          <span>85%</span>
+        </div>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-info" role="progressbar" style="width: 85%"></div>
+          <!-- bg-info = light blue/cyan colour -->
+        </div>
+
+        <div class="skill-label">
+          <span>Node.js</span>
+          <span>80%</span>
+        </div>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-warning" role="progressbar" style="width: 80%"></div>
+        </div>
+
+      </div><!-- end left column -->
+
+      <!-- Right column: tools and other skills -->
+      <div class="col-md-6 mb-4">
+        <h5 class="fw-bold mb-3">Tools &amp; Technologies</h5>
+
+        <div class="skill-label">
+          <span>MongoDB</span>
+          <span>78%</span>
+        </div>
+        <div class="progress mb-3">
+          <div class="progress-bar" role="progressbar" style="width: 78%"></div>
+        </div>
+
+        <div class="skill-label">
+          <span> AWS</span>
+          <span>70%</span>
+        </div>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-danger" role="progressbar" style="width: 70%"></div>
+          <!-- bg-danger = red colour -->
+        </div>
+
+        <div class="skill-label">
+          <span>Git &amp; GitHub</span>
+          <span>88%</span>
+        </div>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 88%"></div>
+        </div>
+
+       
+
+      </div><!-- end right column -->
+    </div><!-- end row -->
+
+    <!-- Technology badges/tags -->
+    <h5 class="fw-bold mt-2 mb-3">Technologies I use</h5>
+    <div>
+
+      <span class="badge bg-primary me-2 mb-2 rounded-pill fs-6">JavaScript</span>
+      <span class="badge bg-secondary me-2 mb-2 rounded-pill fs-6">JQuery</span>
+      <span class="badge bg-success me-2 mb-2 rounded-pill fs-6">Python</span>
+      <span class="badge bg-info me-2 mb-2 rounded-pill fs-6">React</span>
+      <span class="badge bg-dark me-2 mb-2 rounded-pill fs-6">Node.js</span>
+      <span class="badge bg-primary me-2 mb-2 rounded-pill fs-6">PostgreSQL</span>
+      <span class="badge bg-success me-2 mb-2 rounded-pill fs-6">MongoDB</span>
+      <span class="badge bg-dark me-2 mb-2 rounded-pill fs-6">Bootstrap</span>
+      <span class="badge bg-danger me-2 mb-2 rounded-pill fs-6">Git</span>
+    </div>
+
+  </div><!-- end container -->
+</section>
+<!-- END SKILLS -->
+
+
+<!---------------------------------------------------------------
+     PORTFOLIO SECTION
+     Shows project cards. Each card opens a Modal when clicked.
+---------------------------------------------------------------- -->
+<section id="portfolio" class="py-5">
+
+  <div class="container">
+
+    <h2 class="section-title">My Projects</h2>
+    <p class="text-muted mt-2 mb-4">Click any project card to see more details.</p>
+
+    <!-- Bootstrap grid: 3 cards per row on medium screens -->
+    <div class="row g-4">
+      <!-- PROJECT CARD 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div 
+          class="card h-100 shadow-sm" 
+          data-bs-toggle="modal" 
+          data-bs-target="#project1Modal"
+          style="cursor:pointer;">
+       
+          <div 
+            class="card-img-top bg-primary text-white text-center py-4"
+            style="font-size: 3rem;">
+            🛒    <!-- windows key+. -->
+          </div>
+
+          <!-- Card body: title and description -->
+          <div class="card-body">
+            <!-- Small category label -->
+            <span class="badge bg-primary mb-2">E-Commerce</span>
+            <h5 class="card-title">ShopFlow Platform</h5>
+            <p class="card-text text-muted">
+              A multi-vendor online store with payments and a full admin dashboard.
+            </p>
+          </div>
+
+          <!-- Card footer -->
+          <div class="card-footer text-primary fw-bold bg-transparent">
+            View Details &rarr;
+            <!-- &rarr; is the HTML code for a right arrow → -->
+          </div>
+
+        </div><!-- end card -->
+      </div><!-- end col -->
+
+      <!-- PROJECT CARD 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div 
+          class="card h-100 shadow-sm" 
+          data-bs-toggle="modal" 
+          data-bs-target="#project2Modal"
+          style="cursor:pointer;">
+          <div class="card-img-top bg-success text-white text-center py-4" style="font-size: 3rem;">📊</div>
+          <div class="card-body">
+            <span class="badge bg-success mb-2">SaaS</span>
+            <h5 class="card-title">AnalyticsHub Dashboard</h5>
+            <p class="card-text text-muted">
+              A data analytics tool where businesses upload CSVs and see charts instantly.
+            </p>
+          </div>
+          <div class="card-footer text-success fw-bold bg-transparent">View Details &rarr;</div>
+        </div>
+      </div>
+
+      <!-- PROJECT CARD 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div 
+          class="card h-100 shadow-sm" 
+          data-bs-toggle="modal" 
+          data-bs-target="#project3Modal"
+          style="cursor:pointer;">
+          <div class="card-img-top bg-warning text-white text-center py-4" style="font-size: 3rem;">🏥</div>
+          <div class="card-body">
+            <span class="badge bg-warning mb-2">HealthTech</span>
+            <h5 class="card-title">MediConnect API</h5>
+            <p class="card-text text-muted">
+              A backend API for a telemedicine app connects doctors and patients online.
+            </p>
+          </div>
+          <div class="card-footer text-warning fw-bold bg-transparent">View Details &rarr;</div>
+        </div>
+      </div>
+
+      <!-- PROJECT CARD 4 -->
+      <div class="col-md-6 col-lg-4">
+        <div 
+          class="card h-100 shadow-sm" 
+          data-bs-toggle="modal" 
+          data-bs-target="#project4Modal"
+          style="cursor:pointer;">
+          <div class="card-img-top bg-info text-white text-center py-4" style="font-size: 3rem;">🎓</div>
+          <div class="card-body">
+            <span class="badge bg-info mb-2">EdTech</span>
+            <h5 class="card-title">LearnPath LMS</h5>
+            <p class="card-text text-muted">
+              A learning management system with video courses, quizzes, and certificates.
+            </p>
+          </div>
+          <div class="card-footer text-info fw-bold bg-transparent">View Details &rarr;</div>
+        </div>
+      </div>
+
+      <!-- PROJECT CARD 5 -->
+      <div class="col-md-6 col-lg-4">
+        <div 
+          class="card h-100 shadow-sm" 
+          data-bs-toggle="modal" 
+          data-bs-target="#project5Modal"
+          style="cursor:pointer;">
+          <div class="card-img-top bg-danger text-white text-center py-4" style="font-size: 3rem;">📱</div>
+          <div class="card-body">
+            <span class="badge bg-danger mb-2">Mobile Web</span>
+            <h5 class="card-title">TaskPulse App</h5>
+            <p class="card-text text-muted">
+              A task manager that works offline and supports team collaboration.
+            </p>
+          </div>
+          <div class="card-footer text-danger fw-bold bg-transparent">View Details &rarr;</div>
+        </div>
+      </div>
+
+      <!-- PROJECT CARD 6 -->
+      <div class="col-md-6 col-lg-4">
+        <div 
+          class="card h-100 shadow-sm" 
+          data-bs-toggle="modal" 
+          data-bs-target="#project6Modal"
+          style="cursor:pointer;">
+          <div class="card-img-top bg-dark text-white text-center py-4" style="font-size: 3rem;">🏦</div>
+          <div class="card-body">
+            <span class="badge bg-dark mb-2">FinTech</span>
+            <h5 class="card-title">WalletWise Finance</h5>
+            <p class="card-text text-muted">
+              A personal finance tracker that reads bank statements and shows your spending.
+            </p>
+          </div>
+          <div class="card-footer text-dark fw-bold bg-transparent">View Details &rarr;</div>
+        </div>
+      </div>
+
+    </div><!-- end row -->
+  </div><!-- end container -->
+</section>
+<!-- END PORTFOLIO -->
+
+
+<!-- ---------------------------------------------------------
+     EXPERIENCE SECTION
+------------------------------------------------------------ -->
+<section id="experience" class="py-5 bg-light">
+
+  <div class="container">
+    <h2 class="section-title">Experience</h2>
+
+    <div class="mt-4">
+
+      <!-- Each experience item is a list-group-item -->
+      <div class="list-group">
+
+        <div class="list-group-item mb-3 rounded shadow-sm">
+      
+          <div class="d-flex justify-content-between align-items-start">
+            
+            <div>
+              <h5 class="mb-1 fw-bold">Senior Software Developer</h5>
+              <p class="mb-1 text-primary">TechBridge Solutions &mdash; Lagos, NG</p>
+              <p class="text-muted mb-0">
+                Led development of 3 SaaS products. Set up CI/CD pipelines and 
+                cut deployment time by 60%.
+              </p>
+            </div>
+            <!-- Badge showing the year range -->
+            <span class="badge bg-primary ms-3">2025 – Now</span>
+          </div>
+        </div>
+
+        <div class="list-group-item mb-3 rounded shadow-sm">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <h5 class="mb-1 fw-bold">Full-Stack Developer</h5>
+              <p class="mb-1 text-primary">Nexus Digital Agency &mdash; Remote</p>
+              <p class="text-muted mb-0">
+                Built and maintained 12+ web applications across e-commerce, 
+                logistics, and healthcare sectors.
+              </p>
+            </div>
+            <span class="badge bg-primary ms-3">2020 – 2024</span>
+          </div>
+        </div>
+
+        <div class="list-group-item mb-3 rounded shadow-sm">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <h5 class="mb-1 fw-bold">Frontend Developer</h5>
+              <p class="mb-1 text-primary">StartFast Inc. &mdash; Abuja, NG</p>
+              <p class="text-muted mb-0">
+                Built responsive UIs using React. Worked closely with design 
+                and product teams to ship features on time.
+              </p>
+            </div>
+            <span class="badge bg-primary ms-3">2019 – 2020</span>
+          </div>
+        </div>
+
+        <div class="list-group-item rounded shadow-sm">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <h5 class="mb-1 fw-bold">Junior Developer (Internship)</h5>
+              <p class="mb-1 text-primary">CodeCraft Labs &mdash; Lagos, NG</p>
+              <p class="text-muted mb-0">
+                Assisted senior developers with building  APIs and 
+                database schemas for fintech clients.
+              </p>
+            </div>
+            <span class="badge bg-secondary ms-3">2018 – 2019</span>
+          </div>
+        </div>
+
+      </div><!-- end list-group -->
+
+      <!-- CV download inside experience section -->
+      <div class="text-center mt-4">
+        <a href="Gbenga_CV.pdf" class="btn btn-primary btn-lg" download>
+          <i class="bi bi-file-earmark-arrow-down me-2"></i>Download Full CV
+        </a>
+      </div>
+
+    </div><!-- end mt-4 wrapper -->
+  </div><!-- end container -->
+</section>
+<!-- END EXPERIENCE -->
+
+
+<!--------------------------------------------------------------------
+     CONTACT SECTION
+--------------------------------------------------------------- -->
+<section id="contact" class="py-5">
+
+  <div class="container">
+    <h2 class="section-title">Contact Me</h2>
+    <p class="text-muted mt-2 mb-4">Have a project or opportunity? Let's talk.</p>
+
+    <div class="row g-4">
+
+      <!-- Left: Contact information -->
+      <div class="col-md-5">
+        <div class="card border-0 shadow-sm p-4 h-100">
+          <h5 class="fw-bold mb-4">Get In Touch</h5>
+
+          <!-- Each contact item uses an icon + text -->
+          <p>
+            <i class="bi bi-envelope-fill text-primary me-2"></i>
+            <a href="mailto:gbenga@email.com" class="text-decoration-none">
+              gbenga@email.com
+            </a>
+          </p>
+          <p>
+            <i class="bi bi-telephone-fill text-primary me-2"></i>
+            <a href="tel:+2340000000000" class="text-decoration-none">
+              +234 000 000 0000
+            </a>
+          </p>
+          <p>
+            <i class="bi bi-geo-alt-fill text-primary me-2"></i>
+            Lagos, Nigeria
+          </p>
+          <p>
+            <i class="bi bi-linkedin text-primary me-2"></i>
+            <a href="https://linkedin.com" target="_blank" class="text-decoration-none">
+              linkedin.com/in/gbenga
+            </a>
+            <!-- target="_blank" = opens link in a new browser tab -->
+          </p>
+          <p>
+            <i class="bi bi-github text-primary me-2"></i>
+            <a href="https://github.com" target="_blank" class="text-decoration-none">
+              github.com/gbenga
+            </a>
+          </p>
+        </div>
+      </div><!-- end contact info column -->
+
+      <!-- Right: Contact form -->
+      <div class="col-md-7">
+        <div class="card border-0 shadow-sm p-4">
+
+          <form action="mailto:gbenga@email.com" method="post">
+
+            <!-- mb-3 = margin-bottom on each form group -->
+            <div class="mb-3">
+              <!-- label ties to the input via "for" and "id" -->
+              <label for="name" class="form-label fw-bold">Your Name</label>
+              <input 
+                type="text" 
+                class="form-control" 
+                id="name" 
+                placeholder="Enter your name"
+                required>
+  
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label fw-bold">Email Address</label>
+              <input 
+                type="email" 
+                class="form-control" 
+                id="email" 
+                placeholder="Enter your email"
+                required>
+            </div>
+
+            <div class="mb-3">
+              <label for="subject" class="form-label fw-bold">Subject</label>
+              <input 
+                type="text" 
+                class="form-control" 
+                id="subject" 
+                placeholder="e.g. Job Offer, Contract Project">
+            </div>
+
+            <div class="mb-3">
+              <label for="message" class="form-label fw-bold">Message</label>
+              <textarea 
+                class="form-control" 
+                id="message" 
+                rows="4" 
+                placeholder="Tell me about your project or opportunity..."
+                required></textarea>
+              <!-- rows="4" = how tall the text area is -->
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary w-100 btn-lg">
+              <i class="bi bi-send me-2"></i>Send Message
+            </button>
+
+          </form>
+
+        </div>
+      </div><!-- end form column -->
+
+    </div><!-- end row -->
+  </div><!-- end container -->
+</section>
+<!-- END CONTACT -->
+
+
+<!-- -------------------------------------------------------------
+     FOOTER
+-------------------------------------------------------------->
+<footer>
+  <div class="container">
+
+    <p class="mb-2 fw-bold fs-6">GB</p>
+    <p class="mb-3">Full-Stack Software Developer &mdash; Lagos, Nigeria</p>
+
+    <!-- Social media icon links -->
+    <div class="mb-3">
+      <a href="https://github.com"   target="_blank" title="GitHub">
+        <i class="bi bi-github"></i>
+      </a>
+      <a href="https://linkedin.com" target="_blank" title="LinkedIn">
+        <i class="bi bi-linkedin"></i>
+      </a>
+      <a href="https://twitter.com"  target="_blank" title="Twitter / X">
+        <i class="bi bi-twitter-x"></i>
+      </a>
+      <a href="mailto:gbenga@email.com" title="Email">
+        <i class="bi bi-envelope-fill"></i>
+      </a>
+    </div>
+
+    <p class="mb-0 small">&copy; 2026 Gbenga. All rights reserved.</p>
+    <!-- &copy; is the © copyright symbol in HTML -->
+
+  </div>
+</footer>
+<!-- END FOOTER -->
+
+
+<!-- --------------------------------------------------------------------
+     MODALS — Project Detail Popups
+    --------------------------------------------------------------------- -->
+
+<!-- PROJECT 1 MODAL -->
+<div 
+  class="modal fade" 
+  id="project1Modal" 
+  tabindex="-1">
+
+  <div class="modal-dialog modal-dialog-centered">
+
+    <div class="modal-content">
+      
+      
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">🛒 ShopFlow Platform</h5>
+        
+        <button 
+          type="button" 
+          class="btn-close btn-close-white" 
+          data-bs-dismiss="modal">
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <p><strong>Type:</strong> E-Commerce Platform</p>
+        <p><strong>Technologies used:</strong></p>
+        <div class="mb-3">
+          <span class="badge bg-primary me-1">React</span>
+          <span class="badge bg-secondary me-1">Node.js</span>
+          <span class="badge bg-success me-1">PostgreSQL</span>
+          <span class="badge bg-info me-1">Paystack API</span>
+          <span class="badge bg-dark me-1">AWS S3</span>
+        </div>
+        <p><strong>Description:</strong></p>
+        <p>
+          A fully-featured multi-vendor e-commerce platform built for the African market.
+          Vendors can sign up, list products, and manage their orders from one dashboard.
+        </p>
+        <p><strong>Key features:</strong></p>
+        <ul>
+          <li>Real-time inventory tracking</li>
+          <li>Paystack &amp; bank transfer payments</li>
+          <li>Admin panel with role-based access</li>
+          <li>Vendor analytics dashboard</li>
+          <li>Mobile-friendly design</li>
+        </ul>
+      </div>
+
+      <!-- Modal Footer: action buttons -->
+      <div class="modal-footer">
+        <button 
+          type="button" 
+          class="btn btn-secondary" 
+          data-bs-dismiss="modal">
+          Close
+        </button>
+        <a href="#" class="btn btn-primary">View Live Site</a>
+      </div>
+
+    </div><!-- end modal-content -->
+  </div><!-- end modal-dialog -->
+</div>
+<!-- END PROJECT 1 MODAL -->
+
+
+<!-- PROJECT 2 MODAL -->
+<div class="modal fade" id="project2Modal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">📊 AnalyticsHub Dashboard</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Type:</strong> SaaS Analytics Tool</p>
+        <p><strong>Technologies used:</strong></p>
+        <div class="mb-3">
+          <span class="badge bg-primary me-1">Next.js</span>
+          <span class="badge bg-secondary me-1">TypeScript</span>
+          <span class="badge bg-success me-1">Python</span>
+          <span class="badge bg-info me-1">MongoDB</span>
+          <span class="badge bg-dark me-1">Docker</span>
+        </div>
+        <p>A SaaS platform where businesses upload their data (CSV files) and instantly see charts, graphs, and reports without needing a data analyst.</p>
+        <ul>
+          <li>CSV and Excel file upload</li>
+          <li>10+ chart types (bar, pie, line, etc.)</li>
+          <li>Shareable dashboard links</li>
+          <li>Team access with different roles</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a href="#" class="btn btn-success">View Live Site</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT 3 MODAL -->
+<div class="modal fade" id="project3Modal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-warning text-white">
+        <h5 class="modal-title">🏥 MediConnect API</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Type:</strong> HealthTech Backend API</p>
+        <div class="mb-3">
+          <span class="badge bg-primary me-1">Node.js</span>
+          <span class="badge bg-secondary me-1">Express</span>
+          <span class="badge bg-success me-1">PostgreSQL</span>
+          <span class="badge bg-info me-1">JWT Auth</span>
+        </div>
+        <p>A secure REST API for a telemedicine app used by 500+ doctors and patients. Handles appointments, messaging, and prescriptions.</p>
+        <ul>
+          <li>Secure login with two-factor authentication</li>
+          <li>Appointment booking with calendar sync</li>
+          <li>Encrypted doctor-patient messaging</li>
+          <li>Prescription management</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a href="#" class="btn btn-warning text-white">View on GitHub</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT 4 MODAL -->
+<div class="modal fade" id="project4Modal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-info text-white">
+        <h5 class="modal-title">🎓 LearnPath LMS</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Type:</strong> EdTech / Learning Platform</p>
+        <div class="mb-3">
+          <span class="badge bg-primary me-1">React</span>
+          <span class="badge bg-secondary me-1">Django</span>
+          <span class="badge bg-success me-1">PostgreSQL</span>
+          <span class="badge bg-warning me-1">Cloudinary</span>
+        </div>
+        <p>A learning management system built for Nigerian schools and training centres. Teachers upload video lessons, students take quizzes and get certificates.</p>
+        <ul>
+          <li>Video upload and streaming</li>
+          <li>Live quizzes with auto-grading</li>
+          <li>PDF certificate on completion</li>
+          <li>Student progress dashboard</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a href="#" class="btn btn-info text-white">View Live Site</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT 5 MODAL -->
+<div class="modal fade" id="project5Modal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title">📱 TaskPulse App</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Type:</strong> Mobile Web App (PWA)</p>
+        <div class="mb-3">
+          <span class="badge bg-primary me-1">React</span>
+          <span class="badge bg-secondary me-1">Firebase</span>
+          <span class="badge bg-dark me-1">Service Workers</span>
+        </div>
+        <p>A Progressive Web App (PWA) for managing personal and team tasks. It works even without internet and can be installed like a mobile app.</p>
+        <ul>
+          <li>Works offline (no internet needed)</li>
+          <li>Push notifications for deadlines</li>
+          <li>Kanban drag-and-drop board</li>
+          <li>Team workspaces</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a href="#" class="btn btn-danger">View Live Site</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT 6 MODAL -->
+<div class="modal fade" id="project6Modal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title">🏦 WalletWise Finance</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Type:</strong> FinTech / Personal Finance</p>
+        <div class="mb-3">
+          <span class="badge bg-primary me-1">Next.js</span>
+          <span class="badge bg-secondary me-1">TypeScript</span>
+          <span class="badge bg-success me-1">PostgreSQL</span>
+        </div>
+        <p>A personal finance tracker that reads your bank statements and automatically sorts your spending into categories so you know where your money goes.</p>
+        <ul>
+          <li>Reads major Nigerian bank statements (PDF)</li>
+          <li>Auto-categorises transactions</li>
+          <li>Monthly budget comparison</li>
+          <li>Savings goals with alerts</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a href="#" class="btn btn-dark">View Live Site</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- --------------------------------------------------------------
+     HIRE ME MODAL
+-------------------------------------------------------- -->
+<div class="modal fade" id="hireModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">Let's Work Together</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <p class="text-muted">Fill in the form and I will get back to you within 24 hours.</p>
+
+        <form>
+          <div class="mb-3">
+            <label class="form-label fw-bold">Your Name</label>
+            <input type="text" class="form-control" placeholder="Full name" required />
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-bold">Email Address</label>
+            <input type="email" class="form-control" placeholder="your@email.com" required />
+          </div>
+          <!-- 
+            A <select> dropdown so the person can choose the type of work.
+            form-select = Bootstrap's styled dropdown.
+          -->
+          <div class="mb-3">
+            <label class="form-label fw-bold">Type of Engagement</label>
+            <select class="form-select">
+              <option disabled selected>Select one...</option>
+              <option>Full-time Employment</option>
+              <option>Freelance / Contract</option>
+              <option>Consultation</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-bold">Message</label>
+            <textarea class="form-control" rows="3" placeholder="Tell me about the project..."></textarea>
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <a href="mailto:gbenga@email.com" class="btn btn-primary">
+          <i class="bi bi-send me-1"></i> Submit
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- END HIRE ME MODAL -->
+
+
+<!-------------------.Js--------------------------- -->
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
